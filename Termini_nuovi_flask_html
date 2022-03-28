@@ -1,0 +1,53 @@
+Questo è un esempio di una pagina html semplice:
+<html>
+    <head>
+        Welcome
+    </head>
+    <body>
+<p>{{testo}}</p>                                                                   -----> {{}} usiamo quando dobbiamo richiamare una variabile dal python
+<img src="/static/images/Ciao.jpg" alt="img benvenuto">                            -----> questo tag ci rappresenta un'immagine
+    </body>
+</html>
+
+
+Per collegare la pagina html ad un css dobbiamo usare questo codice:
+<link rel="stylesheet" href="{{ url_for('static', filename='css/Esercizio1_meteo.css') }}">
+
+
+Qui il colore dello sfondo viene determinato dalla variabile "colore" di python:
+<body bgcolor="{{colore}}">
+
+
+il tag <form action="/data" method = "GET">                                         ci serve quando noi portiamo i dati al server web.
+<form action="/data" method = "GET">
+    <p>Name <input type = "text" name = "Name" /></p>                               <input type = "text"> ci dà un casella di testo(文字框)
+    <p>Sex <input type = "radio" name = "Sex" value="M" />M </p>                    <input type = "radio"> ci dà delle scelte multiple(单选)
+    <p>Hobbies <input type = "checkbox" name = "Hobby1" value="Soccer"/>Soccer      <input type = "checkbox"> ci dà delle scelte multiple con più possibilità di scegliere.(多选)
+            <input type = "checkbox" name = "Hobby2" value="Painting"/>Painting     
+            <input type = "checkbox" name = "Hobby3" value="Gaming"/>Gaming
+    </p>
+    City<select name="City">                                                        <select> <option> ci dà una lista a tendina 
+        <option value=""></option>
+        <option>Milano</option>
+        <option>Roma</option>
+        <option>Napoli</option>
+      </select>
+    </p>
+    <p><textarea name="Comments" rows="4" cols="50"></textarea>                     <textarea> ci dà un'area di testo dove possiamo scrivere dei suggerimenti o commenti.
+    </p>
+    <p><input type = "submit" value = "Submit" /></p>                               <input type = "submit"> ci dà un bottone che va a consegnare questi dati al server web.
+</form>
+
+
+Questo è il codice per fare una lista a tendina con le scelte della lista python:
+<label for="Regione">Scegli un regione:</label>
+        <select name="Regione" id="Regione" method="GET">
+            
+          {% for i in reg%}                                                         fa un ciclo nella lista di python
+          <option value="{{i}}"SELECTED>{{i}}</option>
+          {%endfor%}
+          
+        </select>
+        <p><input type = "submit" value = "Submit" /></p>
+        
+        
