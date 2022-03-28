@@ -20,8 +20,8 @@ Qui il colore dello sfondo viene determinato dalla variabile "colore" di python:
 
 il tag <form action="/data" method = "GET">                                         ci serve quando noi portiamo i dati al server web.
 <form action="/data" method = "GET">
-    <p>Name <input type = "text" name = "Name" /></p>                               <input type = "text"> ci dà un casella di testo(文字框)
-    <p>Sex <input type = "radio" name = "Sex" value="M" />M </p>                    <input type = "radio"> ci dà delle scelte multiple(单选)
+    <p>Name <input type = "text" name = "Name" /></p>                               <input type = "text"> ci dà un casella di testo(文字框), il name ci serve quando siamo in python e dobbiamo usare request.args().
+    <p>Sex <input type = "radio" name = "Sex" value="M" />M </p>                    <input type = "radio"> ci dà delle scelte multiple(单选), il value è il valore che abbiamo scelto/inserito.
     <p>Hobbies <input type = "checkbox" name = "Hobby1" value="Soccer"/>Soccer      <input type = "checkbox"> ci dà delle scelte multiple con più possibilità di scegliere.(多选)
             <input type = "checkbox" name = "Hobby2" value="Painting"/>Painting     
             <input type = "checkbox" name = "Hobby3" value="Gaming"/>Gaming
@@ -51,3 +51,8 @@ Questo è il codice per fare una lista a tendina con le scelte della lista pytho
         <p><input type = "submit" value = "Submit" /></p>
         
         
+Questo codice ci porta in una nuova link:
+<a href="/inserisci">Inserisci</a>ù
+
+
+Questo codice ci 
