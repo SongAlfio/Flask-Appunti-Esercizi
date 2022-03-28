@@ -15,18 +15,15 @@ Il nome della funzione non può essere uguale, neanche il route può essere ugua
 
 
 Questo è un esempio di come ricevere informazioni inviati dall'utente:
-
 nome = request.args['Name']
 
 
 Questo è un esempio di numero random in python:
-
 import random      
 n = random.randint(0, 8)     
 
 
 Questo è un esempio di giorni in tempo reale:
-
 from datetime import datetime
 oggi = datetime.now()
 vacanza = datetime(day=8, month=6, year=2022)
@@ -34,18 +31,15 @@ differenza = vacanza - oggi
 
 
 Per fare una lista di dizionari possiamo fare così:
-
 lista = []
 lista.append({'name':nome, 'username':nome_utente, 'password':password, 'sex':sesso})
 
 
 Questo codice ci fa un ciclo dentro una lista:
-
 for Regione in range(len(geografia)):     
 
 
 Questo è il codice per visualizzare bene la tabella di pandas in html:
-
 url = "https://raw.githubusercontent.com/italia/covid19-opendata-vaccini/master/dati/platea-dose-addizionale-booster.csv"
 df = pd.read_csv(url)
 df.to_html(header="true", table_id="table")
@@ -56,7 +50,6 @@ def home():
     
 
 Questo è il codice per funzionare e per presentare matplotlib e geopandas:
-
 import io
 import geopandas as gpd
 import contextily
