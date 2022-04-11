@@ -50,6 +50,9 @@ def home():
     
 
 Questo è il codice per funzionare e per presentare matplotlib e geopandas:
+from flask import Flask, render_template, send_file, make_response, url_for, Response, request, redirect
+app = Flask(__name__)
+import pandas as pd
 import io
 import geopandas as gpd
 import contextily
@@ -57,7 +60,7 @@ from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 from matplotlib.figure import Figure
 import matplotlib
 matplotlib.use('Agg')
-import matplotlib.pyplot as plt     
+import matplotlib.pyplot as plt 
 @app.route('/quartieri', methods=['GET'])
 def quartieri1():
 
@@ -69,4 +72,8 @@ def quartieri1():
     FigureCanvas(fig).print_png(output)
     return Response(output.getvalue(), mimetype='image/png')
     
-    
+if __name__ == '__main__':
+  app.run(host='0.0.0.0', port=3245, debug=True)
+metttiamo il to__list() quando abbiamo una lista delle colonne da diventare una lista.
+metttiamo il to__html() quando abbiamo una dataframe/geodataframe da diventare una pagina html.
+redirect(url_for('numero')) usiamo per 重新定向
