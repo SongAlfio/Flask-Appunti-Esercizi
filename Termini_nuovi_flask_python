@@ -79,3 +79,4 @@ if __name__ == '__main__':
 metttiamo il to__list() quando abbiamo una lista delle colonne da diventare una lista.
 metttiamo il to__html() quando abbiamo una dataframe/geodataframe da diventare una pagina html.
 redirect(url_for('numero')) usiamo per 重新定向
+la parola chiave global serve a globare i variabili
