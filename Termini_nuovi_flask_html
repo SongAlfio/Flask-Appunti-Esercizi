@@ -10,12 +10,18 @@ Questo è un esempio di una pagina html semplice:
 </html>
 
 
+
+
 Per collegare la pagina html ad un css dobbiamo usare questo codice:
 <link rel="stylesheet" href="{{ url_for('static', filename='css/Esercizio1_meteo.css') }}">
 
 
+
+
 Qui il colore dello sfondo viene determinato dalla variabile "colore" di python:
 <body bgcolor="{{colore}}">
+
+
 
 
 il tag <form action="/data" method = "GET">                                         ci serve quando noi portiamo i dati al server web.
@@ -39,6 +45,8 @@ il tag <form action="/data" method = "GET">                                     
 </form>
 
 
+
+
 Questo è il codice per fare una lista a tendina con le scelte della lista python:
 <label for="Regione">Scegli un regione:</label>
         <select name="Regione" id="Regione" method="GET">
@@ -51,10 +59,22 @@ Questo è il codice per fare una lista a tendina con le scelte della lista pytho
         <p><input type = "submit" value = "Submit" /></p>
         
         
+        
+        
 Questo codice ci porta in una nuova link:
 <a href="/inserisci">Inserisci</a>ù
 
 
-per rappresentare un geodataframe con la mappa dobbiamo usare questo codice.
+
+
+Questo codice ci fa rappresentare un geodataframe con la mappa dobbiamo usare questo codice.
 {{area|safe}}                                                                       il safe serve a coppiare corretamente le parole
 <img src="/mappa">                                                                  la mappa viene fatta da python
+
+
+
+
+Questo codice ci fa un bottone che contiene un link
+<form action="/link3" method="get">
+    <p>Link3<input type="submit" /></p>
+</form>
