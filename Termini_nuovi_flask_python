@@ -75,7 +75,20 @@ def quartieri1():
 if __name__ == '__main__':
   app.run(host='0.0.0.0', port=3245, debug=True)
   
-  
+Questo è il codice per visualizzare un grafico a barre:
+@app.route('/grafico', methods=['GET'])
+def grafico():
+    fig, ax = plt.subplots(figsize = (6,4))
+
+    x = risultato.MUNICIPIO
+    y = risultato.OPERATORE
+
+    ax.bar(x, y, color = "#304C89")
+    plt.xticks(x)
+       output = io.BytesIO()
+    FigureCanvas(fig).print_png(output)
+    return Response(output.getvalue(), mimetype='image/png')
+
 metttiamo il to__list() quando abbiamo una lista delle colonne da diventare una lista.
 metttiamo il to__html() quando abbiamo una dataframe/geodataframe da diventare una pagina html.
 redirect(url_for('numero')) usiamo per 重新定向
