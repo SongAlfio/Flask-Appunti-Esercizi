@@ -75,6 +75,7 @@ def quartieri1():
 if __name__ == '__main__':
   app.run(host='0.0.0.0', port=3245, debug=True)
   
+  
 Questo è il codice per visualizzare un grafico a barre:
 @app.route('/grafico', methods=['GET'])
 def grafico():
@@ -89,7 +90,12 @@ def grafico():
     FigureCanvas(fig).print_png(output)
     return Response(output.getvalue(), mimetype='image/png')
 
+per calcolare l'area di un geodataframe possiamo usare questo codice:
+area = Provincia_Trovata.geometry.area.sum()/ 10**6
+
+
 metttiamo il to__list() quando abbiamo una lista delle colonne da diventare una lista.
 metttiamo il to__html() quando abbiamo una dataframe/geodataframe da diventare una pagina html.
 redirect(url_for('numero')) usiamo per 重新定向
 la parola chiave global serve a globare i variabili
+
