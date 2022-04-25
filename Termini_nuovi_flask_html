@@ -55,5 +55,6 @@ Questo codice ci porta in una nuova link:
 <a href="/inserisci">Inserisci</a>ù
 
 
-per rappresentare un dataframe dobbiamo usare questo codice.
-{{Radio_Trovati|safe}}
+per rappresentare un geodataframe con la mappa dobbiamo usare questo codice.
+{{area|safe}}                                                                       il safe serve a coppiare corretamente le parole
+<img src="/mappa">                                                                  la mappa viene fatta da python
