@@ -99,3 +99,6 @@ metttiamo il to__html() quando abbiamo una dataframe/geodataframe da diventare u
 redirect(url_for('numero')) usiamo per 重新定向
 la parola chiave global serve a globare i variabili
 
+possiamo usare questo codice per controllare se in una lista contiene il testo inserito o no:
+Ristoranti2=Ristoranti['denominazione_pe'].str.lower().dropna().to_list()
+if list(filter(lambda x: Posto in x,Ristoranti2))==None:
