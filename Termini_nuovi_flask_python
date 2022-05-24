@@ -81,8 +81,8 @@ Questo è il codice per visualizzare un grafico a barre:
 def grafico():
     fig, ax = plt.subplots(figsize = (6,4))
 
-    x = risultato.MUNICIPIO
-    y = risultato.OPERATORE
+    x = Dataframe.Colonna1
+    y = Dataframe.Colonna2
 
     ax.bar(x, y, color = "#304C89")
     plt.xticks(x)
