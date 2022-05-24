@@ -76,7 +76,7 @@ if __name__ == '__main__':
   app.run(host='0.0.0.0', port=3245, debug=True)
   
   
-Questo è il codice per visualizzare un grafico a barre:     per fare il grafico è necessario fare il groupby
+Questo è il codice per visualizzare un grafico a barre:     # per fare il grafico è necessario fare il groupby
 @app.route('/grafico', methods=['GET'])
 def grafico():
     fig, ax = plt.subplots(figsize = (6,4))
@@ -84,7 +84,7 @@ def grafico():
     x = Dataframe.Colonna1
     y = Dataframe.Colonna2
 
-    ax.bar(x, y, color = "#304C89")
+    ax.bar(x, y, color = "#304C89")                         # il grafico a torta ha solo x e labels
     plt.xticks(x)
        output = io.BytesIO()
     FigureCanvas(fig).print_png(output)
