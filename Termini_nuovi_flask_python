@@ -76,7 +76,7 @@ if __name__ == '__main__':
   app.run(host='0.0.0.0', port=3245, debug=True)
   
   
-Questo è il codice per visualizzare un grafico a barre:
+Questo è il codice per visualizzare un grafico a barre:     per fare il grafico è necessario fare il groupby
 @app.route('/grafico', methods=['GET'])
 def grafico():
     fig, ax = plt.subplots(figsize = (6,4))
